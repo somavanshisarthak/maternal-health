@@ -14,6 +14,8 @@ import PatientSurvey from './pages/PatientSurvey';
 import DoctorDashboard from './pages/DoctorDashboard';
 import Patients from './pages/Patients';
 import PatientDetails from './pages/PatientDetails';
+import AshaDashboard from './pages/AshaDashboard';
+import UserDashboard from './pages/UserDashboard';
 
 const RequireAuth: React.FC<{ children: React.ReactElement }> = ({ children }) => {
   const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
       {
         path: "/patients",
         element: <Patients />
+      },
+      {
+        path: "/asha-dashboard",
+        element: <AshaDashboard />
+      },
+      {
+        path: "/user-dashboard",
+        element: <UserDashboard />
       },
       {
         path: 'patient-details/:id',
