@@ -14,16 +14,13 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-import os
-import sys
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from database import Base
-from models.doctor import Doctor
-from models.patient import Patient
-from models.survey import SurveyResponse
-from core.config import settings
+from app.database import Base
+from app.models.doctor import Doctor
+from app.models.patient import Patient
+from app.models.survey import SurveyResponse
+from app.core.config import settings
 
 target_metadata = Base.metadata
 

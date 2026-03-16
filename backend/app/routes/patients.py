@@ -4,12 +4,12 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from api.deps import get_current_doctor
-from core.logger import logger
-from database import get_db
-from models.patient import Patient
-from models.survey import SurveyResponse
-from schemas.patient import PatientCreate, PatientOut, PatientWithLatestRisk
+from app.api.deps import get_current_doctor
+from app.core.logger import logger
+from app.database import get_db
+from app.models.patient import Patient
+from app.models.survey import SurveyResponse
+from app.schemas.patient import PatientCreate, PatientOut, PatientWithLatestRisk
 
 router = APIRouter()
 

@@ -1,4 +1,4 @@
-from core.logger import logger
+from app.core.logger import logger
 
 def predict_risk(patient_data: dict) -> str:
     """
